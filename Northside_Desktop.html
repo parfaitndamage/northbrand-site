@@ -671,7 +671,7 @@ let cart = JSON.parse(localStorage.getItem("northside_cart") || "[]");
 function cardHTML(p){
   const badge = p.badge ? '<span class="card-badge">' + p.badge + '</span>' : '';
   return '<div class="card" onclick="openProduct(' + p.id + ')">' +
-    '<div class="card-img">' + badge + '<img loading="lazy" src="' + p.img + '" alt="' + p.name + '" onerror="this.parentElement.innerHTML=\'' + badge.replace(/'/g,"\\'") + 'YOUR PHOTO HERE\'"></div>' +
+    '<div class="card-img">' + badge + '<img loading="lazy" src="' + p.img + '" alt="' + p.name + '" onerror="this.style.display=\'none\';this.parentElement.style.display=\'flex\';this.parentElement.style.alignItems=\'center\';this.parentElement.style.justifyContent=\'center\';this.parentElement.insertAdjacentHTML(\'beforeend\',\'&lt;span style=color:#555&gt;Photo unavailable&lt;/span&gt;\')"></div>' +
     '<div class="card-info">' +
       '<div class="card-cat">' + p.displayCat + '</div>' +
       '<div class="card-name">' + p.name + '</div>' +

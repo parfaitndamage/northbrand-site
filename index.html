@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northside</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northside</title>
+  <style>
+    /* Desktop layout by default */
+    .mobile-only { display: none; }
+    .desktop-only { display: block; }
+
+    /* Mobile adjustments for screens <= 768px */
+    @media (max-width: 768px) {
+      .mobile-only { display: block; }
+      .desktop-only { display: none; }
+    }
+  </style>
 </head>
 <body>
-
-<script>
-    if (window.innerWidth <= 768) {
-        window.location.href = "Northside_Mobile_Pro.html";
-    } else {
-        window.location.href = "Northside_Desktop_Pro.html";
-    }
-</script>
-
+  <div class="mobile-only">
+    <!-- Mobile Content Here -->
+  </div>
+  
+  <div class="desktop-only">
+    <!-- Desktop Content Here -->
+  </div>
 </body>
 </html>

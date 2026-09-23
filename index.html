@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Northside</title>
-  <style>
-    /* Desktop layout by default */
-    .mobile-only { display: none; }
-    .desktop-only { display: block; }
-
-    /* Mobile adjustments for screens <= 768px */
-    @media (max-width: 768px) {
-      .mobile-only { display: block; }
-      .desktop-only { display: none; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Northside</title>
+<script>
+  function redirect() {
+    var target = window.innerWidth <= 768 ? "Northside_Mobile.html" : "Northside_Desktop.html";
+    window.location.replace(target);
+  }
+  redirect();
+</script>
 </head>
 <body>
-  <div class="mobile-only">
-    <!-- Mobile Content Here -->
-  </div>
-  
-  <div class="desktop-only">
-    <!-- Desktop Content Here -->
-  </div>
+  <noscript>
+    <p>Please enable JavaScript, or choose a version:</p>
+    <a href="Northside_Mobile.html">Mobile version</a> |
+    <a href="Northside_Desktop.html">Desktop version</a>
+  </noscript>
 </body>
 </html>
